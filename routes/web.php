@@ -32,4 +32,8 @@ Route::get('/blog', function () {
     return Inertia::render('Blog');
 })->middleware(['auth', 'verified'])->name('blog');
 
+Route::get('/profile', function () {
+    return Inertia::render('Profile');
+})->middleware(['auth', 'verified'])->name('profile');
+
 require __DIR__.'/auth.php';
